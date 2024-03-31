@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Water Shader Experiment</title>
+    <link href="./styles.css" rel="stylesheet"/>
+</head>
+<body>
+    <audio>
+        <source src="public/quack.mp3" type="audio/mp3"/>
+    </audio>
+    <audio>
+        <source src="public/quack2.mp3" type="audio/mp3"/>
+    </audio>
+    <audio>
+        <source src="public/quack3.mp3" type="audio/mp3"/>
+    </audio>
+    <div class="duck-container hidden">
+        <div class="duck-text">
+            <p class="duck-spoken"></p>
+        </div>
+    </div>
+    </div>
+    <div class="overlay">
+        <h1>Hey! What's up</h1>
+        <p>This uses Three.JS and a shader and a random GLB I found online to do some cool stuff</p>
+        <p>That duck on the left is from Roblox. I thought that was kinda funny.</p>
+        <p>Anyways, submit some text below. The duck should quack for that many syllabols!</p>
+        <textarea placeholder="Enter here..."></textarea>
+        <button type="button">Submit</button>
+    </div>
+    <script type="module" src="stage.js"></script>
+</body>
+</html>

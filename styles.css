@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'Kiddosy';
+    src: url("./public/Kiddosy.ttf");
+}
+
+body {
+    margin: 0;
+    font-family: 'Kiddosy', sans-serif;
+    font-size: 1.3em;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    height: fit-content;
+    width: fit-content;
+    max-width: 35%;
+    max-height: 50%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+    border: solid rgb(191, 191, 191) 3px;
+    right: 10%;
+    top: 25%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px 20px;
+}
+.duck-text {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+    border: solid rgb(191, 191, 191) 3px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px 20px;
+}
+
+.duck-container {
+    position: fixed;
+    z-index: 1;
+    max-width: 35%;
+    max-height: 15%;
+    height: 15%;
+    width: 35%;
+    left: 10%;
+    top: 25%;
+    transition: transform ease-in 0.3s;
+    transition: opacity ease-in 0.3s;
+}
+
+.hidden {
+    opacity: 0;
+    transition : opacity 1s;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.duck-container::after {
+	content: '';
+	position: absolute;
+	bottom: -40%;
+	left: 90%;
+	width: 0;
+	height: 0;
+	border: 90px solid transparent;
+	border-top-color: white;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+.duck-container::before {
+    content: 'Duck';
+	position: absolute;
+    background-color: red;
+    z-index: 2;
+    color:white;
+    font-size: 2em;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+    top: -28%;
+    left: -3%;
+    padding: 10px 20px;
+
+
+}
+
+h1 {
+    animation: 3s ease-in-out 1s infinite rainbow;
+}
+
+button {
+    background-color: red;
+    color:white;
+    font-size: 2em;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+    margin: 20px 0;
+    font-family: 'Kiddosy';
+}
+button:hover {
+    background: rgb(149, 8, 8);
+    cursor: pointer;
+}
+
+@keyframes rainbow {
+    0% {
+        color: red;
+    }
+    14% {
+        color: orange;
+    }
+    28% {
+        color: yellow;
+    }
+    42% {
+        color: green;
+    }
+    64% {
+        color: blue;
+    }
+    78% {
+        color: cyan
+    }
+    92% {
+        color: purple;
+    }
+    100% {
+        color: red;
+    }
+
+}
+
+textarea {
+    width: 95%;
+    height: 200px;
+    resize: none;
+    border: solid lightgray;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+textarea:focus {
+    outline: none;
+}
